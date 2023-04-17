@@ -29,15 +29,6 @@
             </feature>
         </config-file>
         
-        <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <service android:exported="false" android:name="com.github.guikeller.cordova.wearos.WearOsListenerService">
-                <intent-filter>
-                    <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
-                    <data android:host="*" android:scheme="wear" />
-                </intent-filter>
-            </service>
-        </config-file>
-
         <js-module src="www/cordova-wearos-plugin.js" name="WearOsPlugin">
             <clobbers target="cordova.WearOsPlugin" />
             <clobbers target="window.WearOsPlugin" />
@@ -45,11 +36,8 @@
 
         <source-file src="src/android/CordovaWearOsPlugin.java" target-dir="src/com/github/guikeller/cordova/wearos" />
         <source-file src="src/android/CordovaWearOsPluginAction.java" target-dir="src/com/github/guikeller/cordova/wearos" />
-        <source-file src="src/android/WearOsBinder.java" target-dir="src/com/github/guikeller/cordova/wearos" />
-        <source-file src="src/android/WearOsListenerService.java" target-dir="src/com/github/guikeller/cordova/wearos" />
-        <source-file src="src/android/WearOsMessageListener.java" target-dir="src/com/github/guikeller/cordova/wearos" />
+        <source-file src="src/android/WearOsListener.java" target-dir="src/com/github/guikeller/cordova/wearos" />
         <source-file src="src/android/WearOsMessageSender.java" target-dir="src/com/github/guikeller/cordova/wearos" />
-        <source-file src="src/android/WearOsServiceConnection.java" target-dir="src/com/github/guikeller/cordova/wearos" />
 
         
     </platform>
