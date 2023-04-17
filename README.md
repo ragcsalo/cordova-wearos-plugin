@@ -2,11 +2,6 @@
 
 Simple plugin that establishes a session with a WearOs Watch and helps exchange of messages between a hybrid application and its WearOs application and vice-versa.
 
-### Java Source (Cordova WearOS Plugin)
-
-This plugin uses an .AAR file that is created from here:<br>
-https://github.com/guikeller/cordova-wearos-plugin-source
-
 ## Installation
 
 ### With cordova-cli
@@ -14,13 +9,13 @@ https://github.com/guikeller/cordova-wearos-plugin-source
 If you are using [cordova-cli](https://github.com/apache/cordova-cli), install
 with:
 
-    cordova plugin add https://github.com/guikeller/cordova-wearos-plugin.git
+    cordova plugin add https://github.com/ragcsalo/cordova-wearos-plugin.git
 
 ### With ionic
 
 With ionic:
 
-    ionic cordova plugin add https://github.com/guikeller/cordova-wearos-plugin.git
+    ionic cordova plugin add https://github.com/ragcsalo/cordova-wearos-plugin.git
 
 ## Use from Javascript
 Edit `www/js/index.js` and add the following code inside `onDeviceReady`
@@ -148,18 +143,6 @@ cordova-plugin-androidx
 cordova-plugin-androidx-adapter
 cordova-android-play-services-gradle-release
 ```
-
-**VERY IMPORTANT**: Android _versionName_ must match, _versionCode_ must be sequential eg:
-```js
-mobile app
-versionName: "1.6.4"
-versionCode: 10604001
-
-wear app
-versionName: "1.6.4"
-versionCode: 10604002
-```
-https://developer.android.com/training/wearables/apps/packaging#distribution-to-wear-1.x-and-2.0-watches
 
 ## Credits
 [Gui Keller](https://www.github.com/guikeller)
