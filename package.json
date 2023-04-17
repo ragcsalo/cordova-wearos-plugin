@@ -10,7 +10,7 @@
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/guikeller/cordova-wearos-plugin.git"
+      "url": "git+https://github.com/ragcsalo/cordova-wearos-plugin.git"
     },
     "keywords": [
       "Android",
@@ -30,8 +30,8 @@
     "author": "Gui Keller",
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/guikeller/cordova-wearos-plugin/issues"
+      "url": "https://github.com/ragcsalo/cordova-wearos-plugin/issues"
     },
-    "homepage": "https://github.com/guikeller/cordova-wearos-plugin"
+    "homepage": "https://github.com/ragcsalo/cordova-wearos-plugin"
   }
   
