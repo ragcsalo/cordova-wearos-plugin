@@ -9,8 +9,8 @@
     <author>Gui Keller</author>
     <license>MIT</license>
     <keywords>Android, WearOs, Watch, Wearable</keywords>
-    <repo>https://github.com/guikeller/cordova-wearos-plugin</repo>
-    <issue>https://github.com/guikeller/cordova-wearos-plugin/issues</issue>
+    <repo>https://github.com/ragcsalo/cordova-wearos-plugin</repo>
+    <issue>https://github.com/ragcsalo/cordova-wearos-plugin/issues</issue>
     
     <engines>
         <engine name="cordova" version=">=7.1.0" />
@@ -19,27 +19,29 @@
     
     <platform name="android">
 
-        <!-- WearOs Dependencies -->
         <preference name="PLAY_SERVICES_VERSION" default="11+"/>
         <framework src="com.google.android.gms:play-services-base:$PLAY_SERVICES_VERSION" />
         <framework src="com.google.android.gms:play-services-wearable:$PLAY_SERVICES_VERSION" />
 
-        <!-- Using an aar lib, hence no messing around too much with the conf -->
-        <resource-file src="src/android/lib/cordova-wearos-plugin.aar" target="libs/cordova-wearos-plugin.aar" />
-        <framework src="src/android/cordova-wearos-plugin.gradle" custom="true" type="gradleReference" />
-    
-        <!-- The 'feature name' value is then available on the www/*-plugin.js file -->
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="CordovaWearOsPlugin" >
                 <param name="android-package" value="com.github.guikeller.cordova.wearos.CordovaWearOsPlugin"/>
             </feature>
         </config-file>
 
-        <!-- The JS file that invokes the Java lib -->
         <js-module src="www/cordova-wearos-plugin.js" name="WearOsPlugin">
             <clobbers target="cordova.WearOsPlugin" />
             <clobbers target="window.WearOsPlugin" />
         </js-module>
+
+        <source-file src="src/android/CordovaWearOsPlugin.java" target-dir="src/com/github/guikeller/cordova/wearos" />
+        <source-file src="src/android/CordovaWearOsPluginAction.java" target-dir="src/com/github/guikeller/cordova/wearos" />
+        <source-file src="src/android/WearOsBinder.java" target-dir="src/com/github/guikeller/cordova/wearos" />
+        <source-file src="src/android/WearOsListenerService.java" target-dir="src/com/github/guikeller/cordova/wearos" />
+        <source-file src="src/android/WearOsMessageListener.java" target-dir="src/com/github/guikeller/cordova/wearos" />
+        <source-file src="src/android/WearOsMessageSender.java" target-dir="src/com/github/guikeller/cordova/wearos" />
+        <source-file src="src/android/WearOsServiceConnection.java" target-dir="src/com/github/guikeller/cordova/wearos" />
+
         
     </platform>
 </plugin>
