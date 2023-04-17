@@ -28,6 +28,15 @@
                 <param name="android-package" value="com.github.guikeller.cordova.wearos.CordovaWearOsPlugin"/>
             </feature>
         </config-file>
+        
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <service android:name="com.github.guikeller.cordova.wearos.WearOsListenerService">
+                <intent-filter>
+                    <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+                    <data android:host="*" android:scheme="wear" />
+                </intent-filter>
+            </service>
+        </config-file>
 
         <js-module src="www/cordova-wearos-plugin.js" name="WearOsPlugin">
             <clobbers target="cordova.WearOsPlugin" />
