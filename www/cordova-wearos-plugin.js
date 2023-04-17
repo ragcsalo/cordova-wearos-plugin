@@ -1,4 +1,3 @@
-cordova.define("cordova-wearos-plugin.WearOsPlugin", function(require, exports, module) {
 module.exports = {
     init: function(successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback, "CordovaWearOsPlugin", "init", []);
@@ -13,5 +12,3 @@ module.exports = {
         cordova.exec(successCallback, errorCallback, "CordovaWearOsPlugin", "registerMessageListener", []);
     }
 };
-
-});
